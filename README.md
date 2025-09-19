@@ -1,69 +1,24 @@
-# React + TypeScript + Vite
+# 📌 Sobre o Sistema
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este sistema foi desenvolvido para auxiliar no controle de visitas semanais a clientes e na geração de relatórios mensais.
+O fluxo funciona assim:
 
-Currently, two official plugins are available:
+- Cada cliente deve receber 1 visita por semana, totalizando 4 visitas ao mês.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- É permitido realizar mais de uma visita na mesma semana, sem problemas.
 
-## Expanding the ESLint configuration
+- Ao final das 4 semanas, deve ser gerado um relatório consolidado dos atendimentos daquele cliente.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O sistema também conta com um alerta automático, que avisa quando já foram registradas visitas em todas as semanas do mês e o relatório ainda não foi concluído.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# ⚠️ Lógica do Alerta de Relatório Pendente
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. O sistema verifica se em cada semana do mês houve ao menos uma visita registrada para aquele cliente.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. Quando todas as 4 semanas tiverem registro de visita:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Caso o relatório ainda não tenha sido finalizado, o sistema gera um alerta de pendência.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- O alerta permanece ativo até que o relatório seja marcado como concluído.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Isso garante que não se esqueça do fechamento mensal de relatórios, mesmo quando houver visitas extras em algumas semanas.
