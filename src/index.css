@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #333;
+  margin: 20px;
+}
+
+.App h1 {
+  text-align: center;
+  color: #0079bf;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 12px;
+  min-width: 40px;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.week1-header, .week1-bg { background-color: #ffcccc; }
+.week2-header, .week2-bg { background-color: #fff0b3; }
+.week3-header, .week3-bg { background-color: #cce6ff; }
+.week4-header, .week4-bg { background-color: #d9ccff; }
+
+.client-header {
+  min-width: 200px;
+}
+
+.client-name {
+  text-align: left;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.week-cell, .report-cell {
+  vertical-align: middle;
+}
+
+/* --- Estilos para o container de Alertas --- */
+.alerts-container {
+  background-color: #fffbe6; /* Amarelo bem claro */
+  border: 1px solid #ffe58f;  /* Borda amarela */
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.alerts-container h2 {
+  margin-top: 0;
+  color: #d46b08; /* Laranja escuro */
+  font-size: 1.2em;
+}
+
+.alerts-container p {
+  margin-top: 0;
+  color: #61471a;
+}
+
+.alerts-container ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.alerts-container li {
+  font-weight: bold;
+  color: #bf5800;
+  margin-bottom: 4px;
+}
