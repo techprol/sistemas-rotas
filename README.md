@@ -1,6 +1,6 @@
 # 📌 Sobre o Sistema
 
-Este sistema foi desenvolvido para auxiliar no controle de visitas semanais a clientes e na geração de relatórios mensais.
+Este sistema foi desenvolvido para auxiliar no controle de rotas semanais a clientes e na geração de relatórios mensais.
 O fluxo funciona assim:
 
 - Cada cliente deve receber 1 visita por semana, totalizando 4 visitas ao mês.
@@ -22,3 +22,7 @@ O sistema também conta com um alerta automático, que avisa quando já foram re
 - O alerta permanece ativo até que o relatório seja marcado como concluído.
 
 3. Isso garante que não se esqueça do fechamento mensal de relatórios, mesmo quando houver visitas extras em algumas semanas.
+
+# FALTA IMPLEMENTAR
+
+Identificar ao inicio da 3º semana se foi feito rota para o cliente na semana 1 ou 2, caso não, emitir um alerta para que haja a rota para o cliente.
