@@ -22,12 +22,11 @@ export const INITIAL_CLIENTS: Client[] = [
   { id: 15, name: 'TANGARÁ', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 16, name: 'JARDIM ANGICOS', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 17, name: 'SAMU', schedule: createEmptySchedule(), reportSubmitted: false },
-  { id: 18, name: 'AREIA BRANCA', schedule: createEmptySchedule(), reportSubmitted: false },
+  { id: 18, name: 'TIBAU DO SUL', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 19, name: 'LAGOA NOVA', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 20, name: 'PASSA E FICA', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 21, name: 'PUREZA', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 22, name: 'SERRA CAIADA', schedule: createEmptySchedule(), reportSubmitted: false },
   { id: 23, name: 'SERRINHA', schedule: createEmptySchedule(), reportSubmitted: false },
-  { id: 23, name: 'TIBAU DO SUL', schedule: createEmptySchedule(), reportSubmitted: false },
   // Adicione mais clientes aqui se precisar
 ];
