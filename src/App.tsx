@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Roteiro } from './components/Roteiro';
 import { Alerts } from './components/Alerts';
 import { INITIAL_CLIENTS } from './data/initialData';
